@@ -1,18 +1,18 @@
 const sounds = {
     rain: {
         name: "Дождь",
-        file: "../src/assets/sounds/rain.mp3",
-        background: "../src/assets/rainy-bg.jpg",
+        file: "src/assets/sounds/rain.mp3",
+        background: "src/assets/rainy-bg.jpg",
     },
     summer: {
         name: "Лето",
-        file: "../src/assets/sounds/summer.mp3",
-        background: "../src/assets/summer-bg.jpg",
+        file: "src/assets/sounds/summer.mp3",
+        background: "src/assets/summer-bg.jpg",
     },
     winter: {
         name: "Зима",
-        file: "../src/assets/sounds/winter.mp3",
-        background: "../src/assets/winter-bg.jpg",
+        file: "src/assets/sounds/winter.mp3",
+        background: "src/assets/winter-bg.jpg",
     },
 };
 let currentAudio = null;
