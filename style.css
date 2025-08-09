@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: none;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #e67b24;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 48px;
+    gap: 24px;
+    width: 100%;
+}
+
+.controls-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+}
+
+button[data-sound] {
+    width: 120px;
+    height: 120px;
+    padding: 0;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+button[data-sound] .icon {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+    pointer-events: none;
+    user-select: none;
+}
+
+button[data-sound="rain"] {
+    background-image: url("src/assets/rainy-bg.jpg");
+}
+button[data-sound="summer"] {
+    background-image: url("src/assets/summer-bg.jpg");
+}
+button[data-sound="winter"] {
+    background-image: url("src/assets/winter-bg.jpg");
+}
+
+button[data-sound]:hover {
+    border-color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+}
+
+#volume {
+    margin-top: 24px;
+    width: 240px;
+    display: block;
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 600px) {
+    .controls-buttons {
+        flex-direction: column;
+        gap: 16px;
+    }
+    button[data-sound] {
+        width: 100px;
+        height: 100px;
+        font-size: 1rem;
+    }
+    #volume {
+        width: 100%;
+    }
+}
